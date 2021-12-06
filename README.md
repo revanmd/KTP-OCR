@@ -3,6 +3,7 @@
 
 KTP OCR is python-flask with tesseract web application to convert Indonesian ID Card to text / JSON Data
 - convert KTP to JSON
+- word correction with edit distance for correcting kecamatan & tempat lahir
 - text preprocessing for enhance the quality of result (in progres) 
 
 ## Installation (UBUNTU)
