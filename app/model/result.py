@@ -4,11 +4,11 @@ from .person import Person
 class Result:
     @staticmethod
     def regex_nama(string):
-        return re.search ("(^nama|^nam|^na[a-z]+) ([\s\S]*?)",string)
+        return re.search ("(.+nama.+|^nam|^na.+) ([\s\S]*?)",string)
     
     @staticmethod    
     def regex_nik(string):
-        return re.search("^ni.*[0-9]$", string)
+        return re.search("^ni", string)
     
     @staticmethod   
     def regex_tempat(string):
@@ -20,11 +20,11 @@ class Result:
     
     @staticmethod
     def regex_kec(string):
-        return re.search("(^kec|^ke.+tan)",string)
+        return re.search("(^kec|^ke.+tan\s)",string)
     
     @staticmethod
     def regex_kel(string):
-        return re.search("(^kel|^ke.+han)",string)
+        return re.search("(^kel|^ke.+han\s)",string)
     
     @staticmethod
     def prepare_result(list_of_string):

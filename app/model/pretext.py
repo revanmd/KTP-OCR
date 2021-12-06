@@ -3,8 +3,9 @@ class Pretext:
     
     @staticmethod   
     def get_nama(text):
-        text = re.sub(r'(^nama|^nam|^na[a-z]+)\s', "", text)
+        text = re.sub(r'[0-9]',"",text)
         text = re.sub(r'[^\w\s]', "", text)
+        text = re.sub(r'(^nama|^nam|^na.+\s)', "", text.strip())    
         return text.strip()
     
     @staticmethod
@@ -21,6 +22,7 @@ class Pretext:
         text = re.sub(r'(^tempat|^tempa|^temp|temp)([\s\S]*?)',"",text)
         text = re.sub(r'(^tgi|^tgl|^tg)',"",text)
         text = re.sub(r'(^lahir|^lah)',"",text.strip())
+        text
         return text.strip()
     
     @staticmethod
